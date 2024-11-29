@@ -1,5 +1,9 @@
 import os
 from notes_manager import NotesManager
+from tasks_manager import TasksManager
+from contacts_manager import ContactsManager
+from finance_manager import FinanceManager
+from calculator import Calculator
 
 
 def main():
@@ -14,7 +18,20 @@ def main():
 
         choice = input("Выберите действие (1-6): ")
         if choice == "1":
-            NotesManager().menu()
+            notes_manager = NotesManager()
+            notes_manager.menu()
+        elif choice == '2':
+            task_manager = TasksManager()
+            task_manager.menu()
+        elif choice == '3':
+            contact_manager = ContactsManager()
+            contact_manager.menu()
+        elif choice == '4':
+            finance_manager = FinanceManager()
+            finance_manager.menu()
+        elif choice == '5':
+            calculator = Calculator()
+            calculator.run()
         elif choice == '6':
             break
         else:
