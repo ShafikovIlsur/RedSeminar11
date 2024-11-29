@@ -88,7 +88,7 @@ class NotesManager:
 
         note['title'] = new_title
         note['content'] = new_content
-        note['new_timestamp'] = new_timestamp
+        note['timestamp'] = new_timestamp
         self.save_notes()
         print('Заметка отредактирована.')
 
